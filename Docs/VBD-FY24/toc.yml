@@ -1,0 +1,446 @@
+- name: VBD
+  href: ~/VBD-FY24/readme.md
+  items:
+    - name: Unify your Intelligent Data and Analytics platform
+      href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/readme.md
+      items:
+        - name: Deploying Microsoft Fabric
+          href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/readme.md
+          items:
+            - name: Architecture Design and Review Session
+              href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/ArchDesignReview/readme.md
+              items:
+                - name: MS Fabric - OneLake and Data Engineering
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/ArchDesignReview/ArchDesignReview_SmartLkhs.md
+                - name: MS Fabric - Data Integration and Orchestration
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/ArchDesignReview/ArchDesignReview_DataPrep.md
+                - name: MS Fabric - Real Time Analytics
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/ArchDesignReview/ArchDesignReview_FabricRTA.md
+                - name: MS Fabric - Modernize Data Warehouse
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/ArchDesignReview/ArchDesignReview_FabricDW.md
+                - name: MS Fabric - Data Science, Generative AI and Copilots
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/ArchDesignReview/ArchDesignReview_Datascience.md
+                - name: MS Fabric - Platform, Security and Governance
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/ArchDesignReview/ArchDesignReview_SecuGovern.md
+                - name: MS Fabric - Upgrade to Modern Analytics
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/ArchDesignReview/ArchDesignReview_Upgrade.md
+            - name: Proof of Concept
+              href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/PoCExec/readme.md
+              items:
+                - name: MS Fabric - OneLake and Data Engineering
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/PoCExec/PoCExec_SmartLkhs.md
+                - name: MS Fabric - Data Integration and Orchestration
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/PoCExec/PoCExec_DataPrep.md
+                - name: MS Fabric - Real Time Analytics
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/PoCExec/PoCExec_FabricRTA.md
+                - name: MS Fabric - Modernize Data Warehouse
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/PoCExec/PoCExec_Dataware.md
+                - name: MS Fabric - Data Science, Generative AI and Copilots
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/PoCExec/PoCExec_Datascience.md
+                - name: MS Fabric - Platform, Security and Governance
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/PoCExec/PoCExec_SecuGovern.md
+                - name: MS Fabric - Upgrade to Modern Analytics
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/PoCExec/PoCExec_Upgrade.md
+                - name: MS Fabric - Sustainability Data Solutions
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/PoCExec/PoCExec_SDSF.md
+            - name: Upskilling Execution
+              href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/UpskillingExec/readme.md
+              items:
+                - name: MS Fabric - Introduction
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/UpskillingExec/UpskillingExec_Found.md
+                - name: MS Fabric - OneLake and Data Engineering
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/UpskillingExec/UpskillingExec_SmartLkhs.md
+                - name: MS Fabric - Data Integration and Orchestration
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/UpskillingExec/UpskillingExec_DataPrep.md
+                - name: MS Fabric - Real Time Analytics
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/UpskillingExec/UpskillingExec_FabricRTA.md
+                - name: MS Fabric - Modernize Data Warehouse
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/UpskillingExec/UpskillingExec_Dataware.md
+                - name: MS Fabric - Data Science, Generative AI and Copilots
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/UpskillingExec/UpskillingExec_Datascience.md
+                - name: MS Fabric - Platform, Security and Governance
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/UpskillingExec/UpskillingExec_SecuGovern.md
+            - name: Production Deployment Oversight
+              href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/ProdDeployOversight/readme.md
+              items:
+                - name: MS Fabric - OneLake and Data Engineering
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/ProdDeployOversight/ProdDeployOversight_SmartLkhs.md
+                - name: MS Fabric - Data Integration and Orchestration
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/ProdDeployOversight/ProdDeployOversight_DataPrep.md
+                - name: MS Fabric - Real Time Analytics
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/ProdDeployOversight/ProdDeployOversight_FabricRTA.md
+                - name: MS Fabric - Modernize Data Warehouse
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/ProdDeployOversight/ProdDeployOversight_Dataware.md
+                - name: MS Fabric - Data Science, Generative AI and Copilots
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/ProdDeployOversight/ProdDeployOversight_Datascience.md
+            - name: Go-Live Assessment
+              href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/Go-LiveAssess.md
+            - name: Solution Optimization
+              href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/SolnOptimization/readme.md
+              items:
+                - name: MS Fabric - OneLake and Data Engineering
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/SolnOptimization/SolnOptimization_SmartLkhs.md
+                - name: MS Fabric - Data Integration and Orchestration
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/SolnOptimization/SolnOptimization_DataPrep.md
+                - name: MS Fabric - Modernize Data Warehouse
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/SolnOptimization/SolnOptimization_DataWare.md
+                - name: MS Fabric - Data Science, Generative AI and Copilots
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/05-MSFabric/SolnOptimization/SolnOptimization_DataScience.md
+        - name: Deploying Analytics with Scalable Lakehouse Architecture
+          href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/01-DplyAnalMIDPLkhs/readme.md
+          items:
+            - name: Architecture Design and Review Session
+              href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/01-DplyAnalMIDPLkhs/ArchDesignReview.md
+            - name: Proof of Concept
+              href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/01-DplyAnalMIDPLkhs/ProofOfConcept.md
+            - name: Landing Zone Accelerator
+              href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/01-DplyAnalMIDPLkhs/LandingZoneAccel.md
+            - name: Upskilling Execution
+              href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/01-DplyAnalMIDPLkhs/UpskillingExec.md
+            - name: Technical Blocker Mitigation
+              href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/01-DplyAnalMIDPLkhs/TechBlockerMitigation.md
+            - name: Production Deployment Oversight
+              href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/01-DplyAnalMIDPLkhs/ProdDeployOversight.md
+            - name: Go-Live Assessment
+              href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/01-DplyAnalMIDPLkhs/Go-LiveAssess.md
+            - name: Establish WAF
+              href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/01-DplyAnalMIDPLkhs/EstablishWAF.md
+            - name: Solution Optimization
+              href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/01-DplyAnalMIDPLkhs/SolnOptimization.md
+        - name: Building Solutions with Real Time Analytics
+          href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/02-DplyRlTmAnalADX/readme.md
+          items:
+            - name: Real Time Analytics with Azure Data Explorer
+              href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/02-DplyRlTmAnalADX/06-adx/readme.md
+              items:
+                - name: Architecture Design and Review Session
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/02-DplyRlTmAnalADX/06-adx/ArchDesignReview.md
+                - name: Proof of Concept
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/02-DplyRlTmAnalADX/06-adx/ProofOfConcept.md
+                - name: Landing Zone Accelerator
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/02-DplyRlTmAnalADX/06-adx/LandingZoneAccel.md
+                - name: Upskilling Execution
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/02-DplyRlTmAnalADX/06-adx/UpskillingExec.md
+                - name: Technical Blocker Mitigation
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/02-DplyRlTmAnalADX/06-adx/TechBlockerMitigation.md
+                - name: Production Deployment Oversight
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/02-DplyRlTmAnalADX/06-adx/ProdDeployOversight.md
+                - name: Establish WAF
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/02-DplyRlTmAnalADX/06-adx/EstablishWAF.md
+            - name: Real Time Analytics with Azure Stream Analytics
+              href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/02-DplyRlTmAnalADX/07-asa/readme.md
+              items:
+                - name: Upskilling Execution
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/02-DplyRlTmAnalADX/07-asa/UpskillingExec.md
+        - name: Modernize Microsoft Purview Data Governance
+          href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/06-DataGov/readme.md
+          items:
+            - name: Proof of Concept
+              href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/06-datagov/proofofconcept.md
+            - name: Upskilling Execution
+              href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/06-datagov/upskillingexec.md
+            - name: Production Deployment Oversight
+              href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/06-datagov/proddeployoversight.md
+        - name: Deploying Power BI Analytics
+          href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/04-DplyPBIAnal/readme.md
+          items:
+            - name: Deploying New Analytics solutions with Power BI
+              href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/04-DplyPBIAnal/01-NwPBIAnalytic/readme.md
+              items:
+                - name: Architecture Design and Review Session
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/04-DplyPBIAnal/01-NwPBIAnalytic/ArchDesignReview.md
+                - name: Proof of Concept
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/04-DplyPBIAnal/01-NwPBIAnalytic/ProofOfConcept.md
+                - name: Upskilling Execution
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/04-DplyPBIAnal/01-NwPBIAnalytic/UpskillingExec.md
+                - name: Technical Blocker Mitigation
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/04-DplyPBIAnal/01-NwPBIAnalytic/TechBlockerMitigation.md
+                - name: Production Deployment Oversight
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/04-DplyPBIAnal/01-NwPBIAnalytic/ProdDeployOversight.md
+                - name: Go-Live Assessment
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/04-DplyPBIAnal/01-NwPBIAnalytic/Go-LiveAssess.md
+                - name: Solution Optimization
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/04-DplyPBIAnal/01-NwPBIAnalytic/SolnOptimization.md
+            - name: Migrate MS BI solutions to Power BI Premium
+              href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/04-DplyPBIAnal/02-MigratePBIAnalytic/readme.md
+              items:
+                - name: Proof of Concept
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/04-DplyPBIAnal/02-MigratePBIAnalytic/ProofOfConcept.md
+                - name: Upskilling Execution
+                  href: ~/VBD-FY24/01-PwrBusDecsnCldSclAnalytics/04-DplyPBIAnal/02-MigratePBIAnalytic/UpskillingExec.md
+    - name: Build and Modernize AI Apps
+      href: ~/VBD-FY24/02-BldMdrnzAIApps/readme.md
+      items:
+        - name: Build and Modernize Azure Cosmos DB
+          href: ~/VBD-FY24/02-BldMdrnzAIApps/06-BldMdrnzCsms/readme.md
+          items:
+            - name: Architecture Design and Review Session
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/06-BldMdrnzCsms/ArchDesignReview.md
+            - name: Proof of Concept
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/06-BldMdrnzCsms/ProofOfConcept.md
+            - name: Landing Zone Accelerator
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/06-BldMdrnzCsms/LandingZoneAccel.md
+            - name: Upskilling Execution
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/06-BldMdrnzCsms/UpskillingExec.md
+            - name: Technical Blocker Mitigation
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/06-BldMdrnzCsms/TechBlockerMitigation.md
+            - name: Production Deployment Oversight
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/06-BldMdrnzCsms/ProdDeployOversight.md
+            - name: Go-Live Assessment
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/06-BldMdrnzCsms/Go-LiveAssess.md
+            - name: Establish WAF
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/06-BldMdrnzCsms/EstablishWAF.md
+            - name: Solution Optimization
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/06-BldMdrnzCsms/SolnOptimization.md
+
+        - name: Build and Modernize Azure Database for PostgreSQL
+          href: ~/VBD-FY24/02-BldMdrnzAIApps/07-BldMdrnzPostgres/readme.md
+          items:
+            - name: Architecture Design and Review Session
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/07-BldMdrnzPostgres/ArchDesignReview.md
+            - name: Proof of Concept
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/07-BldMdrnzPostgres/ProofOfConcept.md
+            - name: Landing Zone Accelerator
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/07-BldMdrnzPostgres/LandingZoneAccel.md
+            - name: Upskilling Execution
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/07-BldMdrnzPostgres/UpskillingExec.md
+            - name: Technical Blocker Mitigation
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/07-BldMdrnzPostgres/TechBlockerMitigation.md
+            - name: Production Deployment Oversight
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/07-BldMdrnzPostgres/ProdDeployOversight.md
+            - name: Go-Live Assessment
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/07-BldMdrnzPostgres/Go-LiveAssess.md
+            - name: Establish WAF
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/07-BldMdrnzPostgres/EstablishWAF.md
+            - name: Solution Optimization
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/07-BldMdrnzPostgres/SolnOptimization.md
+
+        - name: Build and Modernize Azure Database for MySQL
+          href: ~/VBD-FY24/02-BldMdrnzAIApps/08-BldMdrnzMySql/readme.md
+          items:
+            - name: Architecture Design and Review Session
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/08-BldMdrnzMySql/ArchDesignReview.md
+            - name: Proof of Concept
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/08-BldMdrnzMySql/ProofOfConcept.md
+            - name: Landing Zone Accelerator
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/08-BldMdrnzMySql/LandingZoneAccel.md
+            - name: Upskilling Execution
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/08-BldMdrnzMySql/UpskillingExec.md
+            - name: Technical Blocker Mitigation
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/08-BldMdrnzMySql/TechBlockerMitigation.md
+            - name: Production Deployment Oversight
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/08-BldMdrnzMySql/ProdDeployOversight.md
+            - name: Go-Live Assessment
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/08-BldMdrnzMySql/Go-LiveAssess.md
+            - name: Establish WAF
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/08-BldMdrnzMySql/EstablishWAF.md
+            - name: Solution Optimization
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/08-BldMdrnzMySql/SolnOptimization.md
+
+        - name: Build and Modernize with Azure SQL DB (New Apps)
+          href: ~/VBD-FY24/02-BldMdrnzAIApps/09-BldMdrnzSql/readme.md
+          items:
+            - name: Architecture Design and Review Session
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/09-BldMdrnzSql/ArchDesignReview.md
+            - name: Proof of Concept
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/09-BldMdrnzSql/ProofOfConcept.md
+            - name: Landing Zone Accelerator
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/09-BldMdrnzSql/LandingZoneAccel.md
+            - name: Upskilling Execution
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/09-BldMdrnzSql/UpskillingExec.md
+            - name: Technical Blocker Mitigation
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/09-BldMdrnzSql/TechBlockerMitigation.md
+            - name: Production Deployment Oversight
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/09-BldMdrnzSql/ProdDeployOversight.md
+            - name: Go-Live Assessment
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/09-BldMdrnzSql/Go-LiveAssess.md
+            - name: Establish WAF
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/09-BldMdrnzSql/EstablishWAF.md
+            - name: Solution Optimization
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/09-BldMdrnzSql/SolnOptimization.md
+
+        - name: Innovating Apps with Azure OpenAI
+          href: ~/VBD-FY24/02-BldMdrnzAIApps/05-InnovAppAOAI/readme.md
+          items:
+            - name: Solution Optimization
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/05-InnovAppAOAI/SolnOptimization.md
+            - name: Technical Blocker Mitigation
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/05-InnovAppAOAI/TechBlockerMitigation.md
+            - name: Landing Zone Accelerator
+              href: ~/VBD-FY24/02-BldMdrnzAIApps/05-InnovAppAOAI/LandingZoneAccel.md
+
+    - name: Migrate and Secure Windows Server, SQL and Linux Estate
+      href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/readme.md
+      items:
+        - name: Migration to Azure Cosmos DB for MongoDB (vCore)
+          href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/01-MigrToCsms/readme.md
+          items:
+            - name: Architecture Design and Review Session
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/01-MigrToCsms/ArchDesignReview.md
+            - name: Proof of Concept
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/01-MigrToCsms/ProofOfConcept.md
+            - name: Landing Zone Accelerator
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/01-MigrToCsms/LandingZoneAccel.md
+            - name: Upskilling Execution
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/01-MigrToCsms/UpskillingExec.md
+            - name: Technical Blocker Mitigation
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/01-MigrToCsms/TechBlockerMitigation.md
+            - name: Production Deployment Oversight
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/01-MigrToCsms/ProdDeployOversight.md
+            - name: Go-Live Assessment
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/01-MigrToCsms/Go-LiveAssess.md
+            - name: Establish WAF
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/01-MigrToCsms/EstablishWAF.md
+            - name: Solution Optimization
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/01-MigrToCsms/SolnOptimization.md
+
+        - name: Migration to Azure Database for PostgreSQL
+          href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/02-MigrToPostgres/readme.md
+          items:
+            - name: Architecture Design and Review Session
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/02-MigrToPostgres/ArchDesignReview.md
+            - name: Proof of Concept
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/02-MigrToPostgres/ProofOfConcept.md
+            - name: Landing Zone Accelerator
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/02-MigrToPostgres/LandingZoneAccel.md
+            - name: Upskilling Execution
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/02-MigrToPostgres/UpskillingExec.md
+            - name: Technical Blocker Mitigation
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/02-MigrToPostgres/TechBlockerMitigation.md
+            - name: Production Deployment Oversight
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/02-MigrToPostgres/ProdDeployOversight.md
+            - name: Go-Live Assessment
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/02-MigrToPostgres/Go-LiveAssess.md
+            - name: Establish WAF
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/02-MigrToPostgres/EstablishWAF.md
+            - name: Solution Optimization
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/02-MigrToPostgres/SolnOptimization.md
+
+        - name: Modernize Azure SQL
+          href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/readme.md
+          items:
+            - name: Modernization to Azure SQL DB (PaaS)
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/01-MdrnzToSqlDbPaas/readme.md
+              items:
+                - name: Architecture Design and Review Session
+                  href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/01-MdrnzToSqlDbPaas/ArchDesignReview.md
+                - name: Proof of Concept
+                  href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/01-MdrnzToSqlDbPaas/ProofOfConcept.md
+                - name: Landing Zone Accelerator
+                  href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/01-MdrnzToSqlDbPaas/LandingZoneAccel.md
+                - name: Upskilling Execution
+                  href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/01-MdrnzToSqlDbPaas/UpskillingExec.md
+                - name: Technical Blocker Mitigation
+                  href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/01-MdrnzToSqlDbPaas/TechBlockerMitigation.md
+                - name: Production Deployment Oversight
+                  href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/01-MdrnzToSqlDbPaas/ProdDeployOversight.md
+                - name: Go-Live Assessment
+                  href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/01-MdrnzToSqlDbPaas/Go-LiveAssess.md
+                - name: Establish WAF
+                  href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/01-MdrnzToSqlDbPaas/EstablishWAF.md
+                - name: Solution Optimization
+                  href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/01-MdrnzToSqlDbPaas/SolnOptimization.md
+
+            - name: Modernization to SQL Managed Instance (PaaS)
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/02-AzureSQLMI/readme.md
+              items:
+                - name: Architecture Design and Review Session
+                  href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/02-AzureSQLMI/ArchDesignReview.md
+                - name: Proof of Concept
+                  href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/02-AzureSQLMI/ProofOfConcept.md
+                - name: Landing Zone Accelerator
+                  href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/02-AzureSQLMI/LandingZoneAccel.md
+                - name: Upskilling Execution
+                  href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/02-AzureSQLMI/UpskillingExec.md
+                - name: Technical Blocker Mitigation
+                  href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/02-AzureSQLMI/TechBlockerMitigation.md
+                - name: Production Deployment Oversight
+                  href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/02-AzureSQLMI/ProdDeployOversight.md
+                - name: Go-Live Assessment
+                  href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/02-AzureSQLMI/Go-LiveAssess.md
+                - name: Establish WAF
+                  href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/02-AzureSQLMI/EstablishWAF.md
+                - name: Solution Optimization
+                  href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/02-AzureSQLMI/SolnOptimization.md
+
+        - name: Hybrid - Arc Enabled SQL Server
+          href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/03-ArcSQLServer/readme.md
+          items:
+            - name: Architecture Design and Review Session
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/03-ArcSQLServer/ArchDesignReview.md
+            - name: Proof of Concept
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/03-ArcSQLServer/ProofOfConcept.md
+            - name: Landing Zone Accelerator
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/03-ArcSQLServer/LandingZoneAccel.md
+            - name: Upskilling Execution
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/03-ArcSQLServer/UpskillingExec.md
+            - name: Technical Blocker Mitigation
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/03-ArcSQLServer/TechBlockerMitigation.md
+            - name: Production Deployment Oversight
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/03-ArcSQLServer/ProdDeployOversight.md
+            - name: Go-Live Assessment
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/03-ArcSQLServer/Go-LiveAssess.md
+            - name: Establish WAF
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/03-ArcSQLServer/EstablishWAF.md
+            - name: Solution Optimization
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/03-MdrnzSql/03-ArcSQLServer/SolnOptimization.md
+
+        - name: Migration to SQL Server
+          href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/04-MigrSql/readme.md
+          items:
+            - name: Architecture Design and Review Session
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/04-MigrSql/ArchDesignReview.md
+            - name: Proof of Concept
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/04-MigrSql/ProofOfConcept.md
+            - name: Landing Zone Accelerator
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/04-MigrSql/LandingZoneAccel.md
+            - name: Upskilling Execution
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/04-MigrSql/UpskillingExec.md
+            - name: Technical Blocker Mitigation
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/04-MigrSql/TechBlockerMitigation.md
+            - name: Production Deployment Oversight
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/04-MigrSql/ProdDeployOversight.md
+            - name: Go-Live Assessment
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/04-MigrSql/Go-LiveAssess.md
+            - name: Establish WAF
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/04-MigrSql/EstablishWAF.md
+            - name: Solution Optimization
+              href: ~/VBD-FY24/05-MigrSecrWinSrvSQLSrvLinux/04-MigrSql/SolnOptimization.md
+
+    - name: Innovate with Azure AI Platform
+      href: ~/VBD-FY24/04-InnowithAzureAIPlatform/readme.md
+      items:
+        - name: Azure AI (incl. AOAI, AI Studio, Azure AI Search / Speech & Translation / Vision Services)
+          href: ~/VBD-FY24/04-InnowithAzureAIPlatform/AzureAI/readme.md
+          items:
+            - name: Architecture Design and Review Session
+              href: ~/VBD-FY24/04-InnowithAzureAIPlatform/AzureAI/ArchDesignReview.md
+            - name: Proof of Concept
+              href: ~/VBD-FY24/04-InnowithAzureAIPlatform/AzureAI/ProofOfConcept.md
+            - name: Landing Zone Accelerator
+              href: ~/VBD-FY24/04-InnowithAzureAIPlatform/AzureAI/LandingZoneAccel.md
+            - name: Upskilling Execution
+              href: ~/VBD-FY24/04-InnowithAzureAIPlatform/AzureAI/UpskillingExec.md
+            - name: Technical Blocker Mitigation
+              href: ~/VBD-FY24/04-InnowithAzureAIPlatform/AzureAI/TechBlockerMitigation.md
+            - name: Production Deployment Oversight
+              href: ~/VBD-FY24/04-InnowithAzureAIPlatform/AzureAI/ProdDeployOversight.md
+            - name: Solution Optimization
+              href: ~/VBD-FY24/04-InnowithAzureAIPlatform/AzureAI/SolnOptimization.md
+        - name: Azure Machine Learning
+          href: ~/VBD-FY24/04-InnowithAzureAIPlatform/AML/readme.md
+          items:
+            - name: Architecture Design and Review Session
+              href: ~/VBD-FY24/04-InnowithAzureAIPlatform/AML/ArchDesignReview.md
+            - name: Proof of Concept
+              href: ~/VBD-FY24/04-InnowithAzureAIPlatform/AML/ProofOfConcept.md
+            - name: Landing Zone Accelerator
+              href: ~/VBD-FY24/04-InnowithAzureAIPlatform/AML/LandingZoneAccel.md
+            - name: Upskilling Execution
+              href: ~/VBD-FY24/04-InnowithAzureAIPlatform/AML/UpskillingExec.md
+            - name: Technical Blocker Mitigation
+              href: ~/VBD-FY24/04-InnowithAzureAIPlatform/AML/TechBlockerMitigation.md
+            - name: Production Deployment Oversight
+              href: ~/VBD-FY24/04-InnowithAzureAIPlatform/AML/ProdDeployOversight.md
+            - name: Solution Optimization
+              href: ~/VBD-FY24/04-InnowithAzureAIPlatform/AML/SolnOptimization.md

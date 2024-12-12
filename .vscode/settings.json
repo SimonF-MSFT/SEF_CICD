@@ -1,0 +1,15 @@
+{
+    "cSpell.words": [
+        "Hyperscale",
+        "Statergy",
+        "Upskilling",
+        "upskills"
+    ],
+    "local-history.maxDisplay": 50,
+    "markdown.extension.print.theme": "light",
+    "markdown.preview.typographer": true,
+    "markdown.preview.breaks": true,
+    "material-icon-theme.activeIconPack": "angular",
+    "markdown-links.autoStart": true,
+    "markdown-image.local.referencePath": "/images/${YY}-${MM}/"
+}
