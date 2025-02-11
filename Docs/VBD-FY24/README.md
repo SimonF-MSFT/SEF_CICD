@@ -2,7 +2,8 @@
 
 > [!IMPORTANT]
 > Important News & Announcements</BR>
-> Some text ...
+> Some text .....</BR>
+> Some more text
 
 ### VBD Release Information
 ![VBD Release Info](./media/VBD_Release_Notes_Aug_2024.png)

@@ -21,7 +21,7 @@ jobs:
         echo "Merge Commit: $MERGE_COMMIT"
 
         # Get the previous commit
-        PREVIOUS_COMMIT=$(git rev-parse HEAD^1)
+        PREVIOUS_COMMIT=$(git rev-parse HEAD^)
         echo "Previous Commit: $PREVIOUS_COMMIT"
 
         # Set outputs
