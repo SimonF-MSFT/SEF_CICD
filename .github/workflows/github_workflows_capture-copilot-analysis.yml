@@ -23,7 +23,8 @@ jobs:
         # Get the previous commit
         #PREVIOUS_COMMIT=$(git rev-parse HEAD~1)
         #PREVIOUS_COMMIT=$(git log --merges -n 1 --pretty=format:%H)
-        PREVIOUS_COMMIT=$(git rev-parse HEAD^1)
+        #PREVIOUS_COMMIT=$(git rev-parse HEAD^1)
+        PREVIOUS_COMMIT=$(git rev-parse HEAD^)
         echo "Previous Commit: $PREVIOUS_COMMIT"
 
         # Set outputs
