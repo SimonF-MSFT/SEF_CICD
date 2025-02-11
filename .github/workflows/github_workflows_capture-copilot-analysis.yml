@@ -19,7 +19,7 @@ jobs:
         git fetch origin
         git checkout ${{ github.event.pull_request.base.ref }}
         git pull
-        git diff --name-only ${{ github.sha }} HEAD^ > merged_files.txt
+        git diff --name-only ${{ github.sha }} HEAD > merged_files.txt
 
     - name: Display merged files
       run: |
