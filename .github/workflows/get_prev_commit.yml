@@ -15,10 +15,20 @@ jobs:
     - name: Get Previous Commit SHA - 1
       id: get_previous_sha
       run: echo "PREVIOUS_SHA1=$(git rev-parse HEAD^1)" >> $GITHUB_ENV
-      run: echo "PREVIOUS_SHA2=$(git rev-parse HEAD~1)" >> $GITHUB_ENV
-      run: echo "PREVIOUS_SHA3=$(git rev-parse HEAD^)" >> $GITHUB_ENV
 
     - name: Use Previous Commit SHA - 1
       run: echo "Previous Commit SHA 1 is $PREVIOUS_SHA1"
+
+    - name: Get Previous Commit SHA - 2
+      id: get_previous_sha
+      run: echo "PREVIOUS_SHA2=$(git rev-parse HEAD~1)" >> $GITHUB_ENV
+
+    - name: Use Previous Commit SHA - 2
       run: echo "Previous Commit SHA 2 is $PREVIOUS_SHA2"
+
+    - name: Get Previous Commit SHA - 3
+      id: get_previous_sha
+      run: echo "PREVIOUS_SHA3=$(git rev-parse HEAD^)" >> $GITHUB_ENV
+
+    - name: Use Previous Commit SHA - 3
       run: echo "Previous Commit SHA 3 is $PREVIOUS_SHA3"
