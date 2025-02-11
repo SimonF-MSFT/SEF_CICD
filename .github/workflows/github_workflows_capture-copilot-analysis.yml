@@ -22,13 +22,11 @@ jobs:
 
         # Get the previous commit
         #PREVIOUS_COMMIT=$(git rev-parse HEAD~1)
-        PREVIOUS_COMMIT=$(git log --merges -n 1 --pretty=format:%H)
+        #PREVIOUS_COMMIT=$(git log --merges -n 1 --pretty=format:%H)
+        PREVIOUS_COMMIT=$(git rev-parse HEAD^1)
         echo "Previous Commit: $PREVIOUS_COMMIT"
 
         # Set outputs
-        #echo "::set-output name=merge_commit::$MERGE_COMMIT"
-        #echo "::set-output name=previous_commit::$PREVIOUS_COMMIT"
-
         echo "merge_commit=$MERGE_COMMIT" >> $GITHUB_OUTPUT
         echo "previous_commit=$PREVIOUS_COMMIT" >> $GITHUB_OUTPUT
 
