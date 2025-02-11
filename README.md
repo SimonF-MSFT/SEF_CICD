@@ -1,2 +1,2 @@
 # SEF_CICD
-testing CICD Pipelines
+testing Pipelines
