@@ -1,7 +1,8 @@
 # CSU Data & AI Value Based Deliverable Guidance
 
 > [!IMPORTANT]
-> Important News & Announcements.
+> Important News & Announcements</BR>
+> Some text ...
 
 ### VBD Release Information
 ![VBD Release Info](./media/VBD_Release_Notes_Aug_2024.png)
