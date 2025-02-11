@@ -45,7 +45,7 @@ jobs:
         cat copilot_summaries.txt
 
     - name: Upload summaries as artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: copilot-summaries
         path: copilot_summaries.txt
