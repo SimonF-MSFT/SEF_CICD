@@ -1,6 +1,8 @@
 name: Get Previous Commit SHA
 
-on: [push]
+on:
+  pull_request:
+    types: [closed]
 
 jobs:
   build:
@@ -10,9 +12,13 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Get Previous Commit SHA
+    - name: Get Previous Commit SHA - 1
       id: get_previous_sha
-      run: echo "PREVIOUS_SHA=$(git rev-parse HEAD^1)" >> $GITHUB_ENV
+      run: echo "PREVIOUS_SHA1=$(git rev-parse HEAD^1)" >> $GITHUB_ENV
+      run: echo "PREVIOUS_SHA2=$(git rev-parse HEAD~1)" >> $GITHUB_ENV
+      run: echo "PREVIOUS_SHA3=$(git rev-parse HEAD^)" >> $GITHUB_ENV
 
-    - name: Use Previous Commit SHA
-      run: echo "Previous Commit SHA is $PREVIOUS_SHA"
+    - name: Use Previous Commit SHA - 1
+      run: echo "Previous Commit SHA 1 is $PREVIOUS_SHA1"
+      run: echo "Previous Commit SHA 2 is $PREVIOUS_SHA2"
+      run: echo "Previous Commit SHA 3 is $PREVIOUS_SHA3"
