@@ -24,7 +24,6 @@ jobs:
         #PREVIOUS_COMMIT=$(git rev-parse HEAD~1)
         PREVIOUS_COMMIT=$(git log --merges -n 1 --pretty=format:%H)
         echo "Previous Commit: $PREVIOUS_COMMIT"
-        cat $PREVIOUS_COMMIT
 
         # Set outputs
         #echo "::set-output name=merge_commit::$MERGE_COMMIT"
