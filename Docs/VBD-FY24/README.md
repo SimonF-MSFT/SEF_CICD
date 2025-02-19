@@ -6,7 +6,8 @@
 > Some more text
 
 ### VBD Release Information
-![VBD Release Info](./media/VBD_Release_Notes_Aug_2024.png)
+
+delete the image line
 
 Please review change logs and additional information below.
 
