@@ -10,26 +10,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2 # Fetch the last two commits
 
-    - name: Get merge commit and previous commit
-      id: get-commits
-      run: |
-        # Get the merge commit
-        MERGE_COMMIT=$(git rev-parse HEAD)
-        echo "Merge Commit: $MERGE_COMMIT"
+      - name: Get Merge Commit SHA
+        run: |
+          MERGE_COMMIT=${{ github.sha }}
+          echo "Current Commit SHA: MERGE_COMMIT"
 
-        # Get the previous commit
-        #PREVIOUS_COMMIT=$(git rev-parse HEAD~1)
-        #PREVIOUS_COMMIT=$(git log --merges -n 1 --pretty=format:%H)
-        #PREVIOUS_COMMIT=$(git rev-parse HEAD^1)
-        PREVIOUS_COMMIT=$(git rev-parse HEAD^)
-        echo "Previous Commit: $PREVIOUS_COMMIT"
-
-        # Set outputs
-        echo "merge_commit=$MERGE_COMMIT" >> $GITHUB_OUTPUT
-        echo "previous_commit=$PREVIOUS_COMMIT" >> $GITHUB_OUTPUT
+      - name: Get Previous Commit SHA
+        run: |
+          PREVIOUS_COMMIT=$(git rev-parse HEAD~1)
+          echo "Previous Commit SHA: $PREVIOUS_COMMIT"
 
     - name: Compare commits and get changed files
       id: compare-commits
