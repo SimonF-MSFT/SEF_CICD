@@ -3,7 +3,6 @@
 > [!IMPORTANT]
 > Important News & Announcements</BR>
 > Some text .....</BR>
-> Some more text</BR>
 > Some more text
 
 ### VBD Release Information
