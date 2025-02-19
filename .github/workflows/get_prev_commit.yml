@@ -21,7 +21,7 @@ jobs:
 
       - name: Get Updated Files
         run: |
-          merged_files.txt=${{ steps.files.outputs.all }}
+          echo ${{ steps.files.outputs.all }} > merged_files.txt
       
       - name: List Updated Files 1
         run: |
