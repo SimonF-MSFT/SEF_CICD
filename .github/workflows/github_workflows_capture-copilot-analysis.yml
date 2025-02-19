@@ -6,7 +6,6 @@ on:
 
 jobs:
   analyze-merged-files:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
@@ -14,6 +13,9 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 2 # Fetch the last two commits
+
+      - name: Check if Pull Request is Merged
+        if: github.event.pull_request.merged == true
 
       - name: Get Merge Commit SHA
         run: |
@@ -25,42 +27,42 @@ jobs:
           PREVIOUS_COMMIT=$(git rev-parse HEAD~1)
           echo "Previous Commit SHA: $PREVIOUS_COMMIT"
 
-    - name: Compare commits and get changed files
-      id: compare-commits
-      run: |
-        # Get the merge commit and previous commit from the previous step
-        MERGE_COMMIT=${{ steps.get-commits.outputs.merge_commit }}
-        PREVIOUS_COMMIT=${{ steps.get-commits.outputs.previous_commit }}
+      - name: Compare commits and get changed files
+        id: compare-commits
+        run: |
+          # Get the merge commit and previous commit from the previous step
+          MERGE_COMMIT=${{ steps.get-commits.outputs.merge_commit }}
+          PREVIOUS_COMMIT=${{ steps.get-commits.outputs.previous_commit }}
 
-        # Compare commits and get changed files
-        git diff --name-only $PREVIOUS_COMMIT $MERGE_COMMIT > merged_files.txt
-        echo "Changed Files: $CHANGED_FILES"
+          # Compare commits and get changed files
+          git diff --name-only $PREVIOUS_COMMIT $MERGE_COMMIT > merged_files.txt
+          echo "Changed Files: $CHANGED_FILES"
 
-    - name: Display merged files
-      run: |
-        echo "The following files were merged:"
-        cat merged_files.txt
+      - name: Display merged files
+        run: |
+          echo "The following files were merged:"
+          cat merged_files.txt
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.x'
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
 
-    - name: Install dependencies
-      run: pip install requests
+      - name: Install dependencies
+        run: pip install requests
 
-    - name: Generate Copilot analysis summaries
-      id: copilot-summaries
-      run: |
-        python generate_copilot_summaries.py merged_files.txt ${{ github.repository }} ${{ github.sha }}
+      - name: Generate Copilot analysis summaries
+        id: copilot-summaries
+        run: |
+          python generate_copilot_summaries.py merged_files.txt ${{ github.repository }} ${{ github.sha }}
 
-    - name: Display Copilot summaries
-      run: |
-        echo "Copilot analysis summaries:"
-        cat copilot_summaries.txt
+      - name: Display Copilot summaries
+        run: |
+          echo "Copilot analysis summaries:"
+          cat copilot_summaries.txt
 
-    - name: Upload summaries as artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: copilot-summaries
-        path: copilot_summaries.txt
+      - name: Upload summaries as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: copilot-summaries
+          path: copilot_summaries.txt
