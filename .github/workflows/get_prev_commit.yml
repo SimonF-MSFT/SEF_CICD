@@ -1,8 +1,9 @@
 name: Get Previous Commit SHA
 
 on:
-  pull_request:
-    types: [closed]
+  push:
+    branches:
+      - main
 
 jobs:
   build:
