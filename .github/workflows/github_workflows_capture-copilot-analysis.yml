@@ -16,6 +16,7 @@ jobs:
 
       - name: Check if Pull Request is Merged
         if: github.event.pull_request.merged == true
+        run: echo "This pull request has been merged."
 
       - name: Get Merge Commit SHA
         run: |
