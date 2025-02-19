@@ -5,30 +5,20 @@ on:
     types: [closed]
 
 jobs:
-  build:
+  get-commits:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2 # Fetch the last two commits
 
-    - name: Get Previous Commit SHA - 1
-      id: get_previous_sha1
-      run: echo "PREVIOUS_SHA1=$(git rev-parse HEAD^1)" >> $GITHUB_ENV
+      - name: Get Merge Commit SHA
+        run: |
+          CURR_COMMIT= ${{ github.sha }}
+          echo "Current Commit SHA: $CURR_COMMIT"
 
-    - name: Use Previous Commit SHA - 1
-      run: echo "Previous Commit SHA 1 is $PREVIOUS_SHA1"
-
-    - name: Get Previous Commit SHA - 2
-      id: get_previous_sha2
-      run: echo "PREVIOUS_SHA2=$(git rev-parse HEAD~1)" >> $GITHUB_ENV
-
-    - name: Use Previous Commit SHA - 2
-      run: echo "Previous Commit SHA 2 is $PREVIOUS_SHA2"
-
-    - name: Get Previous Commit SHA - 3
-      id: get_previous_sha3
-      run: echo "PREVIOUS_SHA3=$(git rev-parse HEAD^)" >> $GITHUB_ENV
-
-    - name: Use Previous Commit SHA - 3
-      run: echo "Previous Commit SHA 3 is $PREVIOUS_SHA3"
+      - name: Get Previous Commit SHA
+        run: |
+          PREVIOUS_COMMIT=$(git rev-parse HEAD~1)
+          echo "Previous Commit SHA: $PREVIOUS_COMMIT"
