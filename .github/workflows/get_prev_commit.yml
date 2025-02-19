@@ -1,0 +1,24 @@
+name: Get Updated Files
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  get-updated-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2 # Fetch the last two commits
+
+      - name: Retrieve Changed Files
+        id: files
+        uses: masesgroup/retrieve-changed-files@v3
+        with:
+          format: 'json' # You can choose 'space-delimited', 'csv', or 'json'
+
+      - name: List Updated Files
+        run: |
+          echo "Updated files: ${{ steps.files.outputs.all }}"
