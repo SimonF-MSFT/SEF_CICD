@@ -14,7 +14,9 @@ jobs:
           fetch-depth: 2 # Fetch the last two commits
 
       - name: Get Merge Commit SHA
-        run: echo "Merge Commit SHA: ${{ github.sha }}"
+        run: |
+          CURR_COMMIT= ${{ github.sha }}
+          echo "Current Commit SHA: $CURR_COMMIT"
 
       - name: Get Previous Commit SHA
         run: |
