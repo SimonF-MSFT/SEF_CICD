@@ -21,4 +21,13 @@ jobs:
 
       - name: Get Updated Files
         run: |
+          merged_files.txt=${{ steps.files.outputs.all }}
+      
+      - name: List Updated Files 1
+        run: |
+          echo "The following files were merged:"
+          cat merged_files.txt
+
+      - name: List Updated Files 2
+        run: |
           echo "Updated files: ${{ steps.files.outputs.all }}"
