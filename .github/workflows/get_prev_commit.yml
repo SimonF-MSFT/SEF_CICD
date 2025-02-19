@@ -15,7 +15,7 @@ jobs:
 
       - name: Get Merge Commit SHA
         run: |
-          CURR_COMMIT= ${{ github.sha }}
+          CURR_COMMIT=${{ github.sha }}
           echo "Current Commit SHA: $CURR_COMMIT"
 
       - name: Get Previous Commit SHA
