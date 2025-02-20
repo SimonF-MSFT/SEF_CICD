@@ -1,6 +1,6 @@
 # CSU Data & AI Value Based Deliverable Guidance
 
-> [!IMPORTANT]
+> [!WARNING]
 > Important News & Announcements</BR>
 > Some text .....</BR>
 > Some more text
