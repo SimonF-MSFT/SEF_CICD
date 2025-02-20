@@ -1,6 +1,6 @@
 ## [Inspire & Design]
 
-![MCEM Phase](./../../../media/MCEM-Inspire_Design.png)
+![MCEM Phase](~/VBD-FY24/media/MCEM-Inspire_Design.png)
 
 ### **Architecture Design and Review Session for Modernizing your Data Estate with Azure SQL**
 
