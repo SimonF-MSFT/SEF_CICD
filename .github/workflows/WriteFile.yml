@@ -23,7 +23,7 @@ jobs:
     - name: Commit and push changes
       run: |
         git config --global user.name 'SimonF-MSFT'
-        git config --global user.email 'simonfacer@microsoft.com'
+        git config --global user.email 'simon.facer@microsoft.com'
         git add file_*.txt
         git commit -m "Add file with date in name"
         git push
