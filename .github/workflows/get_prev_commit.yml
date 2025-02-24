@@ -33,3 +33,28 @@ jobs:
             for renamed_file in "${renamed_files[@]}"; do
                 echo "Renamed File ${renamed_file}."
           done
+
+      - name: Log file changes
+        run: |     
+          # Create or update the log file
+          LOG_FILE="file_changes.log"
+          DATE=$(date '+%Y-%m-%d %H:%M:%S')
+        
+          for file in ${{ steps.files.outputs.changed_files }}; do
+            echo "$DATE - CHANGED - $file" >> $LOG_FILE
+          done
+        
+          for file in ${{ steps.files.outputs.added_files }}; do
+            echo "$DATE - ADDED - $file" >> $LOG_FILE
+          done
+        
+          for file in ${{ steps.files.outputs.deleted_files }}; do
+            echo "$DATE - DELETED - $file" >> $LOG_FILE
+          done
+        
+          # Commit and push the log file
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add $LOG_FILE
+          git commit -m "Update file changes log"
+          git push
