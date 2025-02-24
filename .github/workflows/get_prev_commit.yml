@@ -40,15 +40,15 @@ jobs:
           LOG_FILE="file_changes.log"
           DATE=$(date '+%Y-%m-%d %H:%M:%S')
         
-          for file in ${{ steps.changed-files.outputs.changed_files }}; do
+          for file in ${{ steps.files.outputs.changed_files }}; do
             echo "$DATE - CHANGED - $file" >> $LOG_FILE
           done
         
-          for file in ${{ steps.changed-files.outputs.added_files }}; do
+          for file in ${{ steps.files.outputs.added_files }}; do
             echo "$DATE - ADDED - $file" >> $LOG_FILE
           done
         
-          for file in ${{ steps.changed-files.outputs.deleted_files }}; do
+          for file in ${{ steps.files.outputs.deleted_files }}; do
             echo "$DATE - DELETED - $file" >> $LOG_FILE
           done
         
