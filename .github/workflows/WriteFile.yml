@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Generate date variable
       run: |
@@ -22,8 +22,8 @@ jobs:
 
     - name: Commit and push changes
       run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git config --global user.name 'SimonF-MSFT'
+        git config --global user.email 'simonfacer@microsoft.com'
         git add file_*.txt
         git commit -m "Add file with date in name"
         git push
