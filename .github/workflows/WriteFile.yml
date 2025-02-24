@@ -4,33 +4,26 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
-
+      
 jobs:
-  write_file:
+  create_date_file:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: New File Name
-      run:
-        DATE=$(date '+%Y-%m-%d %H:%M:%S')
-        LOG_FILE="file_changes.${DATE}.log"
-        
-
-    - name: Write to file
+    - name: Generate date variable
       run: |
-        echo "This is a new file created by GitHub Actions" > $LOG_FILE
-        echo "Additional content can be added here." >> $LOG_FILE
+        DATE=$(date '+%Y-%m-%d')
+        FILE_NAME="file_${DATE}.txt"
+        echo "Creating file: $FILE_NAME"
+        echo "This file was created on $DATE" > $FILE_NAME
 
     - name: Commit and push changes
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git add $LOG_FILE
-        git commit -m "Add new file created by GitHub Actions"
+        git add file_*.txt
+        git commit -m "Add file with date in name"
         git push
