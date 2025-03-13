@@ -56,9 +56,9 @@ jobs:
         
           # Check if the log file exists and has content
           if [ -s $LOG_FILE ]; then
-            echo "Log file created and has content."
+            echo "Log file created and has content "
           else
-            echo "Log file is empty or does not exist."
+            echo "Log file is empty or does not exist "
             exit 1
           fi
         
