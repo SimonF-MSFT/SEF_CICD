@@ -35,6 +35,7 @@ jobs:
           done
 
       - name: Log file changes
+        id: LogFileChanges
         run: |     
           # Create or update the log file
           LOG_FILE="file_changes.log"
@@ -57,4 +58,4 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add $LOG_FILE
           git commit -m "Update file changes log"
-          git push
+          git push origin HEAD:${{ github.head_ref }}
