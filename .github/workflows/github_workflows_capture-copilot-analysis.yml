@@ -20,22 +20,6 @@ jobs:
         with:
           format: 'json' 
 
-      - name: Process Changed Files
-        run: |
-          echo "${{ steps.files.outputs.all }}" > merged_files.txt
-          IFS=',' read -r -a added_modified_files <<< "${{ steps.files.outputs.added_modified }}"
-          for added_modified_file in "${added_modified_files[@]}"; do
-              echo "Added or Modified File ${added_modified_file}."
-          done
-          IFS=',' read -r -a removed_files <<< "${{ steps.files.outputs.removed }}"
-          for removed_file in "${removed_files[@]}"; do
-              echo "Deleted File ${removed_file}."
-          done
-          IFS=',' read -r -a renamed_files <<< "${{ steps.files.outputs.renamed }}"
-          for renamed_file in "${renamed_files[@]}"; do
-              echo "Renamed File ${renamed_file}."
-          done
-
       - name: Log file changes
         run: |     
           # Create or update the log file
