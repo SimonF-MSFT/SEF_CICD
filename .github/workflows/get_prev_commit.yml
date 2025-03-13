@@ -19,23 +19,24 @@ jobs:
         uses: masesgroup/retrieve-changed-files@v3
         with:
           format: 'json' 
-      - run: |
-          echo ${{ steps.files.outputs.all }} > merged_files.txt
-          readarray -t added_modified_files < <(printf '%s,' '${{ steps.files.outputs.added_modified }}')
-            for added_modified_file in "${added_modified_files[@]}"; do
-                echo "Added or Modified File ${added_modified_file}."
-          done          
-          readarray -t removed_files < <(printf '%s,' '${{ steps.files.outputs.removed }}')
-            for removed_file in "${removed_files[@]}"; do
-                echo "Deleted File ${removed_file}."
+
+      - name: Process Changed Files
+        run: |
+          echo "${{ steps.files.outputs.all }}" > merged_files.txt
+          IFS=',' read -r -a added_modified_files <<< "${{ steps.files.outputs.added_modified }}"
+          for added_modified_file in "${added_modified_files[@]}"; do
+              echo "Added or Modified File ${added_modified_file}."
           done
-          readarray -t renamed_files < <(printf '%s,' '${{ steps.files.outputs.renamed }}')
-            for renamed_file in "${renamed_files[@]}"; do
-                echo "Renamed File ${renamed_file}."
+          IFS=',' read -r -a removed_files <<< "${{ steps.files.outputs.removed }}"
+          for removed_file in "${removed_files[@]}"; do
+              echo "Deleted File ${removed_file}."
+          done
+          IFS=',' read -r -a renamed_files <<< "${{ steps.files.outputs.renamed }}"
+          for renamed_file in "${renamed_files[@]}"; do
+              echo "Renamed File ${renamed_file}."
           done
 
       - name: Log file changes
-        id: LogFileChanges
         run: |     
           # Create or update the log file
           LOG_FILE="file_changes.log"
@@ -58,4 +59,4 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add $LOG_FILE
           git commit -m "Update file changes log"
-          git push origin HEAD:${{ github.head_ref }}
+          git push origin HEAD:${{ github.ref }}
