@@ -20,6 +20,22 @@ jobs:
         with:
           format: 'json' 
 
+      - name: Process Changed Files
+        run: |
+          echo "${{ steps.files.outputs.all }}" > merged_files.txt
+          IFS=',' read -r -a added_modified_files <<< "${{ steps.files.outputs.added_modified }}"
+          for added_modified_file in "${added_modified_files[@]}"; do
+              echo "Added or Modified File ${added_modified_file}."
+          done
+          IFS=',' read -r -a removed_files <<< "${{ steps.files.outputs.removed }}"
+          for removed_file in "${removed_files[@]}"; do
+              echo "Deleted File ${removed_file}."
+          done
+          IFS=',' read -r -a renamed_files <<< "${{ steps.files.outputs.renamed }}"
+          for renamed_file in "${renamed_files[@]}"; do
+              echo "Renamed File ${renamed_file}."
+          done
+
       - name: Log file changes
         run: |     
           # Create or update the log file
@@ -27,22 +43,22 @@ jobs:
           DATE=$(date '+%Y-%m-%d %H:%M:%S')
         
           for file in ${{ steps.files.outputs.changed_files }}; do
-            echo "$DATE - CHANGED - $file" >> $LOG_FILE
+            echo "CHANGED - $file" >> $LOG_FILE
           done
         
           for file in ${{ steps.files.outputs.added_files }}; do
-            echo "$DATE - ADDED - $file" >> $LOG_FILE
+            echo "ADDED - $file" >> $LOG_FILE
           done
         
           for file in ${{ steps.files.outputs.deleted_files }}; do
-            echo "$DATE - DELETED - $file" >> $LOG_FILE
+            echo "DELETED - $file" >> $LOG_FILE
           done
         
           # Check if the log file exists and has content
           if [ -s $LOG_FILE ]; then
-            echo "Log file created and has content "
+            echo "Log file created and has content."
           else
-            echo "Log file is empty or does not exist "
+            echo "Log file is empty or does not exist."
             exit 1
           fi
         
