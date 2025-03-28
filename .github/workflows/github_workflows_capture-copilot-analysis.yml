@@ -39,7 +39,7 @@ jobs:
       - name: Log file changes
         run: |     
           # Create or update the log file
-          DtTm=$(date '+%Y%m%d.%H%M%S')
+          DtTm=$(date '+%Y%m%d-%H%M%S')
           FileNamept1="file_changes."
           FileNamept2=".log"
 
