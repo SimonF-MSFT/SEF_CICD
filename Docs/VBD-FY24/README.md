@@ -19,6 +19,7 @@ Please review change logs and additional information below.
 
 These prioritized VBD scenarios are broadly applicable to all our customers and should be proactively executed in all accounts.
 
+### [Unify your Intelligent Data and Analytics platform](./01-UnifyIntelligentData/readme.md)
 
 > [!Note] 
 > The content from MS Fabric has been relocated to its dedicated scenario and is now separate from the Scalable Lakehouse Architecture, as reflected above.

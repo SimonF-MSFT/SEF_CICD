@@ -39,8 +39,7 @@ jobs:
       - name: Log file changes
         run: |     
           # Create or update the log file
-          LOG_FILE="file_changes.log"
-          DATE=$(date '+%Y-%m-%d %H:%M:%S')
+          LOG_FILE="file_changes.$(date '+%Y-%m-%d %H:%M:%S').log"
         
           for file in ${{ steps.files.outputs.modified }}; do
             echo "CHANGED - $file" >> $LOG_FILE
