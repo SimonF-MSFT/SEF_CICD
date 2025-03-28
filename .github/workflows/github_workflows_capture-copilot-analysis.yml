@@ -40,7 +40,7 @@ jobs:
         run: |     
           # Create or update the log file
           DtTm=$(date '+%Y%m%d-%H%M%S')
-          FileNamept1="file_changes."
+          FileNamept1="UpdateLogs\file_changes."
           FileNamept2=".log"
 
           echo ${FileNamept1}
