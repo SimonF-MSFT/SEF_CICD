@@ -13,7 +13,6 @@ Please review change logs and additional information below.
 > - [Connected Customer Experience VBD Page](https://microsoft.sharepoint.com/teams/connectedcustomerexperiencestrategy/sitepages/vbd.aspx)  
 > - [CSU Data & AI - CSA Execution Page](https://microsoft.sharepoint.com/teams/CSUDataAI/SitePages/CSA-Landing.aspx)
 
-</br>
 
 ## List of Priority VBD Scenarios
 
