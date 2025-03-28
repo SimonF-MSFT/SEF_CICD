@@ -39,8 +39,11 @@ jobs:
       - name: Log file changes
         run: |     
           # Create or update the log file
-          LOG_FILE="file_changes.$(date '+%Y-%m-%d %H:%M:%S').log"
-        
+          DtTm=$(date '+%Y-%m-%d %H:%M:%S')
+          LOG_FILE1="file_changes."
+          LOG_FILE2=".log"
+          LOG_FILE="${LOG_FILE1}${DtTm}${LOG_FILE2}"
+                  
           for file in ${{ steps.files.outputs.modified }}; do
             echo "CHANGED - $file" >> $LOG_FILE
           done
