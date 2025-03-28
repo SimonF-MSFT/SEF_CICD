@@ -1,4 +1,4 @@
-#  Migrate and Secure Windows Server and SQL Server
+# Migrate and Secure Windows Server and SQL Server
 
 The following VBD Scenarios come under this solution play
 
