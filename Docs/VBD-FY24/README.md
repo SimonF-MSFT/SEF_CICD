@@ -20,17 +20,6 @@ Please review change logs and additional information below.
 These prioritized VBD scenarios are broadly applicable to all our customers and should be proactively executed in all accounts.
 
 
-### [Unify your Intelligent Data and Analytics Platform](./01-PwrBusDecsnCldSclAnalytics/readme.md)
-| VBD Scenario                                            | Delivery Guide | Aligned Technology          |
-| ------------------------------------------------------------ | -------------- |---------------------|
-| [Deploying Microsoft Fabric](./01-PwrBusDecsnCldSclAnalytics/05-MSFabric/readme.md) <span style="color:red">**New**</span> |[Deploying Microsoft Fabric](./01-PwrBusDecsnCldSclAnalytics/05-MSFabric/readme.md)|Microsoft Fabric |
-| [Deploying Analytics with Scalable Lakehouse Architecture](./01-PwrBusDecsnCldSclAnalytics/01-DplyAnalMIDPLkhs/readme.md) |[Lakehouse Architecture with Azure Databricks + Synapse](./01-PwrBusDecsnCldSclAnalytics/01-DplyAnalMIDPLkhs/01-DbxSyn/readme.md)  |Azure Databricks + Synapse|
-| [Deploying Real-time Analytics with ADX](./01-PwrBusDecsnCldSclAnalytics/02-DplyRlTmAnalADX/readme.md) |[Deploying Real-time Analytics with ADX](./01-PwrBusDecsnCldSclAnalytics/02-DplyRlTmAnalADX/readme.md) |ADX |
-| [Deploying Power BI Analytics](./01-PwrBusDecsnCldSclAnalytics/04-DplyPBIAnal/readme.md) |[Deploying Power BI Analytics](./01-PwrBusDecsnCldSclAnalytics/04-DplyPBIAnal/readme.md)| Power BI
-
-
-
-
 > [!Note] 
 > The content from MS Fabric has been relocated to its dedicated scenario and is now separate from the Scalable Lakehouse Architecture, as reflected above.
 
