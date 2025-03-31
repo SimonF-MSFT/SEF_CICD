@@ -411,17 +411,16 @@ function Get-LinkType ([string]$URLToValidate, [string]$CurrFolder, [string]$Pub
 
 function Main {
 
+    Write-Host "Processing $FileToScan " 
+
     ## Find the publish root (/doc/), based on finding docfx.json in the folder
     $PublishRootFolder = Get-PublishRoot $FileToScan
 
     $File = get-item -Path $FileToScan 
 
-
     ## If a FilesToScan listing has been provided, only process those files - skip all others
     $FileFullName = $file.FullName
 
-    ## Print the file being processed
-    Write-Host "`n`rProcessing $FileFullName " -ForegroundColor Yellow -NoNewLine
     $LineNum = 1
 
     $FileFolder = $file.DirectoryName
