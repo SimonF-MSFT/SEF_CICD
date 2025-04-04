@@ -38,10 +38,11 @@ $PS_UpdateDt = "March 31, 2025"
 ## Identify the Publish Root, this is the folder hosting docfx.json
 function Get-PublishRoot ([string]$ScanFolder) 
   { 
+    $ScanFolder = $ScanFolder.Trim()
+
     $ScanFolderSplit = $ScanFolder.split("\")
     
     $idx = $ScanFolderSplit.count -1
-write-Host "PS: ScanFolderSplit = $ScanFolderSplit" -ForegroundColor Yellow
     while ($idx -gt 0)
       {
         $idx2 = 0
@@ -53,7 +54,6 @@ write-Host "PS: ScanFolderSplit = $ScanFolderSplit" -ForegroundColor Yellow
           }
 
         $DocFXJSON = $PublishRoot + "Docfx.JSON"
-write-Host "PS: Checking for Docfx.JSON in $PublishRoot" -ForegroundColor Yellow       
         if (Test-Path -Path $DocFXJSON)
           {
             return $PublishRoot
@@ -412,6 +412,8 @@ function Get-LinkType ([string]$URLToValidate, [string]$CurrFolder, [string]$Pub
 
 ## Main
 
+    $ReturnError = $false
+
     $FileToScan = $FileToScan.Trim()
     Write-Host "PS: Processing $FileToScan" 
 
@@ -426,21 +428,22 @@ function Get-LinkType ([string]$URLToValidate, [string]$CurrFolder, [string]$Pub
     $File = get-item -Path $FileToScan 
 
     $FileFullName = $file.FullName
-Write-Host "PS: FileFullName = $FileFullName"
 
     ## Find the publish root, based on finding docfx.json in the folder
-    $PublishRootFolder = Get-PublishRoot $FileFullName
-Write-Host "PS: PublishRootFolder = $PublishRootFolder"
+    $FilePath = $file.Path
+    $PublishRootFolder = Get-PublishRoot $FilePath
 
     $LineNum = 1
 
     $FileFolder = $file.DirectoryName
 
     ## process the file, line by line
-    Get-Content $FileFullName | foreach {
+    $FileContent = Get-Content $FileFullName 
+    foreach ($line In $FileContent)
+      {
 
         $ReplChar = [char]255
-        $content = $_.Replace("]`(", $ReplChar)
+        $content = $line.Replace("]`(", $ReplChar)
         $LineNum ++
 
         $split = ($content.split($ReplChar)) | ?{$_ -ne ""}
@@ -598,11 +601,7 @@ Write-Host "PS: PublishRootFolder = $PublishRootFolder"
                       {
                         $Linktype = "aka.ms | "
                       }
-                    if ($UrlIsValid -match "OK")
-                      {
-                        Exit 0
-                      }
-                    else
+                    if ($UrlIsValid -notmatch "OK")
                       {
                         if ($Linktype -match "aka.ms")
                           {
@@ -615,8 +614,8 @@ Write-Host "PS: PublishRootFolder = $PublishRootFolder"
                             $ErrorMsg = $ErrorMsg + " | aka.ms link: | Link Type:" + $Linktype  + " | GitHub Project:" + $GitHubProject  + " | URL is Valid:" + $UrlIsValid                            
                           }
                         
-                        Write-Host "Found TODO in $FilePath"
-                        exit 1
+                        Write-Host @errormsg    
+                        $ReturnError = $true
                       }
                     $tblLinks.Rows.Add($New_tblLinks_Row)
                   }
@@ -627,4 +626,9 @@ Write-Host "PS: PublishRootFolder = $PublishRootFolder"
               }
           }        
       }   
+
+    if ($ReturnError)
+      {
+        Exit 1  
+      }
 ## End Main
