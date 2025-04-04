@@ -409,7 +409,10 @@ function Get-LinkType ([string]$URLToValidate, [string]$CurrFolder, [string]$Pub
     return $return
   }
 
-function Main {
+
+
+
+## Main
 
     Write-Host "Processing $FileToScan " 
 
@@ -616,7 +619,4 @@ function Main {
               }
           }        
       }   
-} ## End Main
-
-Main
-
+## End Main
