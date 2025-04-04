@@ -410,25 +410,27 @@ function Get-LinkType ([string]$URLToValidate, [string]$CurrFolder, [string]$Pub
   }
 
 
-
-
 ## Main
 
     Write-Host "PS: Processing $FileToScan " 
 
-    if ($FileToScan -notmatch ".md")
+    $FileToScan_Parts=$FileToScan.Split(".")
+    $FileToScan_FileType = $FileToScan_Parts[$FileToScan_Parts.count - 1]
+    if ($FileToScan_FileType -ne ".md")
       {
-        Write-Host "PS: File is not Markdown - skipping"
+        Write-Host "PS: File is not Markdown - Skipping"
         exit 0
       }
 
     ## Find the publish root (/doc/), based on finding docfx.json in the folder
     $PublishRootFolder = Get-PublishRoot $FileToScan
+Write-Host "PS: PublishRootFolder = $PublishRootFolder"
 
     $File = get-item -Path $FileToScan 
 
     ## If a FilesToScan listing has been provided, only process those files - skip all others
     $FileFullName = $file.FullName
+Write-Host "PS: FileFullName = $FileFullName"
 
     $LineNum = 1
 
