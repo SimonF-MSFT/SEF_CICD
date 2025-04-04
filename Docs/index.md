@@ -10,5 +10,5 @@ Digital resources to help with Value Based Delivery and Designated Engineering e
 Contents:
 - How to contribute
 - Branch and content publication cycle details and guide
-- Accreditation Overview - how to find accreditations in the VBD docs 
- 
+- Accreditation Overview - how to find accreditations in the VBD docs
+- ...

@@ -19,8 +19,7 @@ jobs:
       - name: Get list of changed files
         id: changed-files
         run: |
-          git diff --name-only origin/main ${{ github.sha }} > changed_files.txt
-          echo "files=$(cat changed_files.txt | tr '\n' ',')" >> $GITHUB_ENV
+          $changedFiles = git diff --name-only ${{ github.event.before }} ${{ github.sha }}
 
       - name: Run PowerShell script on changed files
         run: |
@@ -36,7 +35,7 @@ jobs:
           }
         shell: pwsh
 
-      - name: Comment on the PR if link checker fails
+      - name: Add a Comment to the PR if link checker fails
         if: failure()
         uses: actions/github-script@v6
         with:
