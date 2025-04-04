@@ -38,10 +38,11 @@ $PS_UpdateDt = "March 31, 2025"
 ## Identify the Publish Root, this is the folder hosting docfx.json
 function Get-PublishRoot ([string]$ScanFolder) 
   { 
+    $ScanFolder = $ScanFolder.Trim()
+
     $ScanFolderSplit = $ScanFolder.split("\")
     
     $idx = $ScanFolderSplit.count -1
-write-Host "PS: ScanFolderSplit = $ScanFolderSplit" -ForegroundColor Yellow
     while ($idx -gt 0)
       {
         $idx2 = 0
@@ -53,7 +54,6 @@ write-Host "PS: ScanFolderSplit = $ScanFolderSplit" -ForegroundColor Yellow
           }
 
         $DocFXJSON = $PublishRoot + "Docfx.JSON"
-write-Host "PS: Checking for Docfx.JSON in $PublishRoot" -ForegroundColor Yellow       
         if (Test-Path -Path $DocFXJSON)
           {
             return $PublishRoot
@@ -429,7 +429,8 @@ function Get-LinkType ([string]$URLToValidate, [string]$CurrFolder, [string]$Pub
 Write-Host "PS: FileFullName = $FileFullName"
 
     ## Find the publish root, based on finding docfx.json in the folder
-    $PublishRootFolder = Get-PublishRoot $FileFullName
+    $FilePath = $file.Path
+    $PublishRootFolder = Get-PublishRoot $FilePath
 Write-Host "PS: PublishRootFolder = $PublishRootFolder"
 
     $LineNum = 1
@@ -437,10 +438,12 @@ Write-Host "PS: PublishRootFolder = $PublishRootFolder"
     $FileFolder = $file.DirectoryName
 
     ## process the file, line by line
-    Get-Content $FileFullName | foreach {
+    $FileContent = Get-Content $FileFullName 
+    foreach ($line In $FileContent)
+      {
 
         $ReplChar = [char]255
-        $content = $_.Replace("]`(", $ReplChar)
+        $content = $line.Replace("]`(", $ReplChar)
         $LineNum ++
 
         $split = ($content.split($ReplChar)) | ?{$_ -ne ""}

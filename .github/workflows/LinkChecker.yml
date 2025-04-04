@@ -1,9 +1,8 @@
 name: Scan Updated Files For Bad Links
 
 on:
-  push:
-    branches:
-      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 jobs:
   scan-files:
@@ -18,14 +17,32 @@ jobs:
         id: changed-files
         run: |
           git diff --name-only ${{ github.event.before }} ${{ github.sha }} > changed_files.txt
-          echo "::set-output name=files::$(cat changed_files.txt | tr '\n' ',')"
+          echo "files=$(cat changed_files.txt | tr '\n' ',')" >> $GITHUB_ENV
 
       - name: Run PowerShell script on changed files
         run: |
-          $changedFiles = "${{ steps.changed-files.outputs.files }}".Split(',')
+          $changedFiles = "${{ env.files }}".Split(',')
           foreach ($file in $changedFiles) {
             Write-Host "Scanning file: $file"
-            # Call your PowerShell script here
+            # Call the PowerShell script to check the links in the file
             .\md-link-checker.ps1 -FiletoScan $file
+            if ($LASTEXITCODE -ne 0) {
+              Write-Error "Link checker failed for file: $file"
+              exit 1
+            }
           }
         shell: pwsh
+
+      - name: Comment on the PR if link checker fails
+        if: failure()
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { github, context } = require('@actions/github');
+            const issueComment = context.payload.pull_request.number;
+            const comment = 'Link checker failed. Please fix the bad links.';
+            await github.rest.issues.createComment({
+              ...context.repo,
+              issue_number: issueComment,
+              body: comment
+            });
