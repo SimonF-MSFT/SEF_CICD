@@ -53,7 +53,7 @@ function Get-PublishRoot ([string]$ScanFolder)
           }
 
         $DocFXJSON = $PublishRoot + "Docfx.JSON"
-       
+write-Host "PS: Checking for Docfx.JSON in $PublishRoot" -ForegroundColor Yellow       
         if (Test-Path -Path $DocFXJSON)
           {
             return $PublishRoot
@@ -429,7 +429,6 @@ Write-Host "PS: PublishRootFolder = $PublishRootFolder"
 
     $File = get-item -Path $FileToScan 
 
-    ## If a FilesToScan listing has been provided, only process those files - skip all others
     $FileFullName = $file.FullName
 Write-Host "PS: FileFullName = $FileFullName"
 
@@ -438,7 +437,7 @@ Write-Host "PS: FileFullName = $FileFullName"
     $FileFolder = $file.DirectoryName
 
     ## process the file, line by line
-    Get-Content $file.FullName | foreach {
+    Get-Content $FileFullName | foreach {
 
         $ReplChar = [char]255
         $content = $_.Replace("]`(", $ReplChar)
