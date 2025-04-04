@@ -429,7 +429,7 @@ function Get-LinkType ([string]$URLToValidate, [string]$CurrFolder, [string]$Pub
 Write-Host "PS: FileFullName = $FileFullName"
 
     ## Find the publish root, based on finding docfx.json in the folder
-    $PublishRootFolder = Get-PublishRoot $FileToScan
+    $PublishRootFolder = Get-PublishRoot $FileFullName
 Write-Host "PS: PublishRootFolder = $PublishRootFolder"
 
     $LineNum = 1
