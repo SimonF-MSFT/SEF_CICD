@@ -418,7 +418,7 @@ function Get-LinkType ([string]$URLToValidate, [string]$CurrFolder, [string]$Pub
     $FileToScan_FileType = $FileToScan_Parts[$FileToScan_Parts.count - 1]
     if ($FileToScan_FileType -ne "md")
       {
-        Write-Host "PS: File is not Markdown - Skipping"
+        Write-Host "PS: File is not Markdown ($FileToScan_FileType) - Skipping"
         exit 0
       }
 

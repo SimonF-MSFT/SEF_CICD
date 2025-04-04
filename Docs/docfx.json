@@ -1,0 +1,89 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "src/**.csproj"
+          ]
+        }
+      ],
+      "dest": "api",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "api/**.yml",
+          "api/index.md",
+          "restapi/**.yml",
+          "restapi/**"
+        ]
+      },
+      {
+        "files": [
+          "articles/**/*.md",
+          "articles/**/toc.yml",
+          "toc.yml",
+          "**/*.md"
+        ],
+        "exclude": [
+          "obj/**",
+          "_site/**",
+          "articles/**/cover.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**",
+          "articles/**/media/**",
+          "node-modules/font-awesome/css/font-awesome.min.css",
+          "node-modules/font-awesome/fonts/*",
+          "web.config"
+        ]
+      }
+    ],
+    "overwrite": [
+      {
+        "files": [
+          "apidoc/**.md"
+        ],
+        "exclude": [
+          "obj/**",
+          "_site/**"
+        ]
+      }
+    ],
+    "dest": "_site",
+    "postProcessors": [
+      "ExtractSearchIndex"
+    ],
+    "globalMetadata": {
+      "_appFooter": "<span>MIP Design & Governance</span>",
+      "_appTitle": "CSA Delivery Documentation",
+      "_appLogoPath": "images/ms_logo_round.png",
+      "_image": "https://docs.microsoft.com/en-us/media/logos/logo-ms-social.png",
+      "_enableNewTab": true,
+      "_enableSearch": true,
+      "_gitContribute": {
+        "repo": "https://github.com/asd-management/mdgresourceenterappinnovation"
+      },
+      "_gitUrlPattern": "github"
+    },
+    "fileMetadataFiles": [],
+    "template": [
+      "default",
+      "templates/material/site"
+    ],
+    "markdownEngineName": "markdig",
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false
+  } 
+}
