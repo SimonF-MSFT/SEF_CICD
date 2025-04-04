@@ -2,7 +2,10 @@ name: Scan Updated Files For Bad Links
 
 on:
   pull_request:
+    branches:
+      - main
     types: [opened, synchronize, reopened]
+
 
 jobs:
   scan-files:
