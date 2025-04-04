@@ -17,26 +17,23 @@ jobs:
           fetch-depth: 0
 
       - name: Get list of changed files
-        id: changed-files
         run: |
-          git fetch origin ${{ github.event.pull_request.base.ref }} --depth=1
-          changed_files=$(git diff --name-only origin/${{ github.event.pull_request.base.ref }} ${{ github.sha }} | grep '\.md$' || echo "")
-          echo "changed_files<<EOF" >> $GITHUB_OUTPUT
-          echo "$changed_files" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
+          git fetch origin +refs/pull/${{ github.event.number }}/merge
+          git diff --name-only FETCH_HEAD > changed_files.txt
+          echo "Changed files:"
+          cat changed_files.txt
 
       - name: Run PowerShell script on changed files
         run: |
-          $changedFiles = "${{ env.files }}".Split(',')
-          foreach ($file in $changedFiles) {
+          for file in $(cat changed_files.txt); do
             Write-Host "Scanning file: $file"
             # Call the PowerShell script to check the links in the file
-            .\md-link-checker.ps1 -FiletoScan $file
+            pwsh .\md-link-checker.ps1 -FiletoScan $file
             if ($LASTEXITCODE -ne 0) {
               Write-Error "Link checker failed for file: $file"
               exit 1
             }
-          }
+          done
         shell: pwsh
 
       - name: Add a Comment to the PR if link checker fails
