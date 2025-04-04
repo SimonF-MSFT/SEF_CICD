@@ -412,6 +412,8 @@ function Get-LinkType ([string]$URLToValidate, [string]$CurrFolder, [string]$Pub
 
 ## Main
 
+    $ReturnError = $false
+
     $FileToScan = $FileToScan.Trim()
     Write-Host "PS: Processing $FileToScan" 
 
@@ -426,12 +428,10 @@ function Get-LinkType ([string]$URLToValidate, [string]$CurrFolder, [string]$Pub
     $File = get-item -Path $FileToScan 
 
     $FileFullName = $file.FullName
-Write-Host "PS: FileFullName = $FileFullName"
 
     ## Find the publish root, based on finding docfx.json in the folder
     $FilePath = $file.Path
     $PublishRootFolder = Get-PublishRoot $FilePath
-Write-Host "PS: PublishRootFolder = $PublishRootFolder"
 
     $LineNum = 1
 
@@ -601,11 +601,7 @@ Write-Host "PS: PublishRootFolder = $PublishRootFolder"
                       {
                         $Linktype = "aka.ms | "
                       }
-                    if ($UrlIsValid -match "OK")
-                      {
-                        Exit 0
-                      }
-                    else
+                    if ($UrlIsValid -notmatch "OK")
                       {
                         if ($Linktype -match "aka.ms")
                           {
@@ -618,8 +614,8 @@ Write-Host "PS: PublishRootFolder = $PublishRootFolder"
                             $ErrorMsg = $ErrorMsg + " | aka.ms link: | Link Type:" + $Linktype  + " | GitHub Project:" + $GitHubProject  + " | URL is Valid:" + $UrlIsValid                            
                           }
                         
-                        Write-Host "Found TODO in $FilePath"
-                        exit 1
+                        Write-Host @errormsg    
+                        $ReturnError = $true
                       }
                     $tblLinks.Rows.Add($New_tblLinks_Row)
                   }
@@ -630,4 +626,9 @@ Write-Host "PS: PublishRootFolder = $PublishRootFolder"
               }
           }        
       }   
+
+    if ($ReturnError)
+      {
+        Exit 1  
+      }
 ## End Main

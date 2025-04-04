@@ -16,7 +16,7 @@ jobs:
       - name: Get list of changed files
         id: changed-files
         run: |
-          git diff --name-only ${{ github.event.before }} ${{ github.sha }} > changed_files.txt
+          git diff --name-only origin/main ${{ github.sha }} > changed_files.txt
           echo "files=$(cat changed_files.txt | tr '\n' ',')" >> $GITHUB_ENV
 
       - name: Run PowerShell script on changed files
