@@ -412,7 +412,8 @@ function Get-LinkType ([string]$URLToValidate, [string]$CurrFolder, [string]$Pub
 
 ## Main
 
-    Write-Host "PS: Processing $FileToScan " 
+    $FileToScan = $FileToScan.Trim()
+    Write-Host "PS: Processing $FileToScan" 
 
     $FileToScan_Parts=$FileToScan.Split(".")
     $FileToScan_FileType = $FileToScan_Parts[$FileToScan_Parts.count - 1]
