@@ -26,6 +26,6 @@ jobs:
           foreach ($file in $changedFiles) {
             Write-Host "Scanning file: $file"
             # Call your PowerShell script here
-            .\md-link-checker.ps1 $file
+            .\md-link-checker.ps1 -FiletoScan $file
           }
         shell: pwsh
