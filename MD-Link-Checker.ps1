@@ -41,7 +41,7 @@ function Get-PublishRoot ([string]$ScanFolder)
     $ScanFolderSplit = $ScanFolder.split("\")
     
     $idx = $ScanFolderSplit.count -1
-
+write-Host "PS: ScanFolderSplit = $ScanFolderSplit" -ForegroundColor Yellow
     while ($idx -gt 0)
       {
         $idx2 = 0
@@ -423,14 +423,14 @@ function Get-LinkType ([string]$URLToValidate, [string]$CurrFolder, [string]$Pub
         exit 0
       }
 
-    ## Find the publish root (/doc/), based on finding docfx.json in the folder
-    $PublishRootFolder = Get-PublishRoot $FileToScan
-Write-Host "PS: PublishRootFolder = $PublishRootFolder"
-
     $File = get-item -Path $FileToScan 
 
     $FileFullName = $file.FullName
 Write-Host "PS: FileFullName = $FileFullName"
+
+    ## Find the publish root, based on finding docfx.json in the folder
+    $PublishRootFolder = Get-PublishRoot $FileToScan
+Write-Host "PS: PublishRootFolder = $PublishRootFolder"
 
     $LineNum = 1
 
