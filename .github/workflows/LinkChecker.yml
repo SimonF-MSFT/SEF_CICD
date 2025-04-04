@@ -14,12 +14,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2 # Fetch the last two commits
+          fetch-depth: 0
 
       - name: Get list of changed files
         id: changed-files
         run: |
-          $changedFiles = git diff --name-only ${{ github.event.before }} ${{ github.sha }}
+          git fetch origin ${{ github.event.pull_request.base.ref }} --depth=1
+          $changedFiles=$(git diff --name-only origin/${{ github.event.pull_request.base.ref }} ${{ github.sha }} | grep '\.md$' || echo "")
 
       - name: Run PowerShell script on changed files
         run: |
