@@ -1,10 +1,12 @@
 name: Auto-assign Reviewer
 
 on:
-  pull_request:
-    types: [opened, edited, reopened]
-
-jobs:
+  pull_request:
+    branches:
+      - main
+    types: [opened, synchronize, reopened]
+    
+jobs: 
   assign-reviewer:
     runs-on: ubuntu-latest
 
