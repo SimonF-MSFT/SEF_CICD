@@ -1,4 +1,3 @@
-
 name: Auto-assign Reviewer
 
 on:
@@ -14,8 +13,10 @@ jobs:
       uses: actions/github-script@v6
       with:
         script: |
-          const reviewers = ["SimonF-MSFT"];
-          github.pulls.requestReviewers({
+          const reviewers = [
+          "SimonF-MSFT"
+          ];
+          github.pulls.requestReviewers({
             owner: context.repo.owner,
             repo: context.repo.repo,
             pull_number: context.payload.pull_request.number,
