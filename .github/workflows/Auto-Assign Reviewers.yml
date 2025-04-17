@@ -3,6 +3,8 @@ name: Auto-assign Reviewer
 on:
   pull_request:
     types: [opened, edited, reopened]
+    branches:
+      - main
 
 jobs:
   assign-reviewer:
@@ -13,9 +15,7 @@ jobs:
       uses: actions/github-script@v6
       with:
         script: |
-          const reviewers = [
-              'SimonF-MSFT'
-            ];
+          const reviewers = ['SimonF-MSFT'];
           github.pulls.requestReviewers({
             owner: context.repo.owner,
             repo: context.repo.repo,
