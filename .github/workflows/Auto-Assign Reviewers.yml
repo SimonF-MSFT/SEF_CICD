@@ -1,0 +1,22 @@
+name: Auto-assign Reviewer
+
+on:
+  pull_request:
+    types: [opened, edited, reopened]
+
+jobs:
+  assign-reviewer:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Assign Reviewer
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const reviewers = ['sfacer_microsoft'];
+          github.pulls.requestReviewers({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            pull_number: context.payload.pull_request.number,
+            reviewers
+          });
