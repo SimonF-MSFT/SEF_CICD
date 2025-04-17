@@ -13,7 +13,9 @@ jobs:
       uses: actions/github-script@v6
       with:
         script: |
-          const reviewers = ['sfacer_microsoft'];
+          const reviewers = [
+              'SimonF_MSFT'
+            ];
           github.pulls.requestReviewers({
             owner: context.repo.owner,
             repo: context.repo.repo,
