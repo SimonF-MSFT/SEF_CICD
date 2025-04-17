@@ -1,23 +1,26 @@
-
 name: Auto-assign Reviewer
 
 on:
-  pull_request:
-    types: [opened, edited, reopened]
+  pull_request:
+    branches:
+      - main
+    types: [opened, synchronize, reopened]
+    
+jobs: 
+  assign:
+    runs-on: ubuntu-latest
 
-jobs:
-  assign-reviewer:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Assign Reviewer
-      uses: actions/github-script@v6
-      with:
-        script: |
-          const reviewers = ['SimonF-MSFT'];
-          github.pulls.requestReviewers({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            pull_number: context.payload.pull_request.number,
-            reviewers
-          });
+    steps:
+      - name: Assign Reviewer
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const reviewers = [
+            "SimonF-MSFT"
+            ];
+            github.pulls.requestReviewers({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.pull_request.number,
+              reviewers: reviewers
+            });
